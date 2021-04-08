@@ -1,6 +1,9 @@
 # Visualization of Repost Trees
 
+[Preview](https://apassbydreg.github.io/RepostTreeVisualization/)
+
 A simple implementation of visualizing twitter / weibo repost tree.
+
 
 ![image-20210408164150987](README_imgs/image-20210408164150987.png)
 
