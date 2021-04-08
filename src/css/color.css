@@ -1,0 +1,59 @@
+.root {
+    color: #3776eb;
+    background-color: #3776eb;
+    border-color: #3776eb;
+}
+
+.essential {
+    color: #9edaff;
+    background-color: #9edaff;
+    border-color: #9edaff;
+}
+
+.normal0 {
+    color: transparent;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.normal1 {
+    color: #d3ffe7;
+    background-color: #d3ffe7;
+    border-color: #d3ffe7;
+}
+
+.normal2 {
+    color: #9ff5c9;
+    background-color: #9ff5c9;
+    border-color: #9ff5c9;
+}
+
+.normal3 {
+    color: #81f3b7;
+    background-color: #81f3b7;
+    border-color: #81f3b7;
+}
+
+.normal4 {
+    color: #5eeba8;
+    background-color: #5eeba8;
+    border-color: #5eeba8;
+}
+
+.normal5 {
+    color: #3fe699;
+    background-color: #3fe699;
+    border-color: #3fe699;
+}
+
+.normal6 {
+    color: #1ad688;
+    background-color: #1ad688;
+    border-color: #1ad688;
+}
+
+.normal7 {
+    color: #00c576;
+    background-color: #00c576;
+    border-color: #00c576;
+}

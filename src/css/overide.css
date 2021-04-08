@@ -1,0 +1,33 @@
+.col-2 {
+    padding: 0 !important;
+}
+
+.col-4 {
+    padding: 0 !important;
+}
+
+.col-1 {
+    padding: 0 !important;
+    padding-left: 20px !important;
+}
+
+.col-6 {
+    padding: 0 5px !important;
+}
+
+.col-8 {
+    padding: 0 !important;
+}
+
+.col-10 {
+    padding: 0 !important;
+}
+
+.row {
+    margin: 5px 0 !important;
+}
+
+.col {
+    margin: 0 !important;
+    padding: 0 !important;
+}
