@@ -15,27 +15,28 @@
             </div>
             <div id="file-selector"
                  class="row">
-                <div class="col-6">
+                <div class="col-8">
                     <input type="file" class="form-control" @change="setFile" id="file"/>
                 </div>
-                <div class="col-3">
+                <div class="col-2" style="padding-left: 20px !important;">
                     <button class="btn btn-primary w-100" :disabled="file==null" @click="loadFile">Use Your File</button>
                 </div>
-                <div class="col-3">
+                <div class="col-2" style="padding-left: 20px !important;">
                     <button class="btn btn-secondary w-100" @click="openNewTab('./data/data01.json');">Sample Data</button>
                 </div>
             </div>
             <hr>
             <div id="controls" class="row w-100">
                 <div class="col-2 row d-flex align-items-center">
-                    <div class="col-6">
+                    <div class="col-6" style="padding-left: 15px !important; padding-right: 10px !important;">
                         <button class="btn btn-sm btn-black w-100"
                                 @click="updateEssentials(numEss-1)">
                             Remove
                         </button>
                     </div>
-                    <div class="col-6">
-                        <button class="btn btn-sm btn-black w-100" @click="updateEssentials(numEss+1)">
+                    <div class="col-6" style="padding-left: 10px !important; padding-right: 15px !important;">
+                        <button class="btn btn-sm btn-black w-100"
+                                @click="updateEssentials(numEss+1)">
                             Add
                         </button>
                     </div>
@@ -272,14 +273,14 @@
                     this.lines.push(drawLine(
                         [axisArea.left - relative.x, ypos],
                         [axisArea.right - relative.x, ypos],
-                        '#e0e0e0', 1
+                        '#999999', 1
                     ))
                     for (var i=0; i<=numMarkers; i++) {
                         let xpos = axisArea.left - relative.x + (axisArea.width - 1) * i / numMarkers;
                         this.lines.push(drawLine(
                             [xpos, ypos],
                             [xpos, ypos - markerHeight],
-                            '#e0e0e0', 1
+                            '#999999', 1
                         ))
                     }
                 },
