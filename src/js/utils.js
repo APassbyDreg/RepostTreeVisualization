@@ -56,26 +56,30 @@ function toFolTable(followings, max_ts) {
  */
 function toEssTable(nodes, num_ess, ess_depth) {
     let ess_table = new Array(num_ess + 1).fill(0).map(() => new Array(ess_depth).fill(0));
-    let ess_list = [];
     for (let r = 0; r < num_ess + 1; r++) {
         for (let c = 0; c < ess_depth; c++) {
             ess_table[r][c] = { 'parent': null, 'node': null }
         }
     }
 
+    let ess_list = [nodes[0]];
+    ess_table[0][0]['node'] = nodes[0];
+    ess_table[0][0]['parent'] = null;
     let stk = [[nodes[0], null]];
-    let p = 0;
+    let p = 1;
     while (p < num_ess + 1) {
-        let nxt = stk.pop();
-        ess_list.push(nxt[0]);
-        ess_table[p][nxt[0].depth]['node'] = nxt[0];
-        ess_table[p][nxt[0].depth]['parent'] = nxt[1];
-        for (let index = 0; index < nxt[0].children.length; index++) {
-            if (nxt[0].children[index].type == "essential") {
-                stk.push([nxt[0].children[index], [p, nxt[0].depth]]);
+        let curr = stk.pop();
+        for (let index = 0; index < curr[0].children.length; index++) {
+            if (curr[0].children[index].type == "essential") {
+                let node = curr[0].children[index];
+                let parent = [p - 1, curr[0].depth];
+                ess_table[p][curr[0].depth+1]['node'] = node;
+                ess_table[p][curr[0].depth+1]['parent'] = parent;
+                ess_list.push(node);
+                stk.push([node, parent]);
+                p += 1;
             }
         }
-        p += 1;
     }
 
     return [ess_table, ess_list];
